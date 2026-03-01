@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Hardy Thomas</title>
+  <meta name="description" content="Hardy Thomas — CAM Programmer, AI+CNC Builder. CV and professional experience.">
+  <meta property="og:title" content="CV — Hardy Thomas">
+  <meta property="og:description" content="CAM Programmer at PWR Performance Products. Building AI-native tools for CNC machining.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/shared/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <a href="/" class="nav-brand">Hardy Thomas</a>
+    <div class="nav-links">
+      <a href="/projects/">Projects</a>
+      <a href="/explainers/">Explainers</a>
+      <a href="/playgrounds/">Playgrounds</a>
+      <a href="/cv/" class="active">CV</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container" style="max-width: 800px;">
+
+  <div class="cv-header">
+    <h1>Hardy Thomas</h1>
+    <div class="role">CAM Programmer &amp; AI+CNC Builder</div>
+    <div class="location">Gold Coast, QLD, Australia</div>
+    <div class="cv-actions">
+      <button class="btn btn-primary" onclick="window.print()">Download PDF</button>
+      <a href="https://github.com/hardythomas000" target="_blank" class="btn btn-outline">GitHub</a>
+    </div>
+  </div>
+
+  <div class="cv-section">
+    <h2>Summary</h2>
+    <p style="color: var(--text-secondary); line-height: 1.8;">CAM Programmer with hands-on CNC machining experience, building open-source tools that connect AI to manufacturing. Specialise in Mastercam programming for Haas machines, with a parallel track record of shipping browser-based developer tools, interactive explainers, and an SDF-based CAD kernel with 44 MCP tools for LLM-authored geometry. Strong at bridging the gap between the shop floor and software.</p>
+  </div>
+
+  <div class="cv-section">
+    <h2>Experience</h2>
+    <div class="cv-entry">
+      <h3>CAM Programmer</h3>
+      <div class="meta">PWR Performance Products — Gold Coast, QLD</div>
+      <ul>
+        <li>Program CNC machining operations using Mastercam for Haas VMCs with TRT (trunnion/rotary table)</li>
+        <li>Develop custom Mastercam post processors including automated Renishaw probing integration</li>
+        <li>Build internal browser-based tools for setup sheets, toolpath visualization, and machine monitoring</li>
+        <li>Design workholding solutions and support frame generation for 5-axis parts</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cv-section">
+    <h2>Technical Skills</h2>
+    <div class="skill-grid">
+      <div class="skill-group">
+        <h4>CNC / CAM</h4>
+        <p>Mastercam, Haas control, G-code, post processors, 3-axis & 5-axis machining, Renishaw probing, workholding design</p>
+      </div>
+      <div class="skill-group">
+        <h4>Languages</h4>
+        <p>Python, TypeScript, JavaScript, HTML/CSS, C#</p>
+      </div>
+      <div class="skill-group">
+        <h4>Web / 3D</h4>
+        <p>Three.js, Canvas API, Vite, FastAPI, WASM (OCCT, Manifold), PWAs</p>
+      </div>
+      <div class="skill-group">
+        <h4>AI / Tools</h4>
+        <p>MCP servers, LLM tool authoring, SDF geometry, Claude Code, agent-native architecture</p>
+      </div>
+      <div class="skill-group">
+        <h4>Geometry</h4>
+        <p>SDF kernels, B-Rep (OCCT), mesh booleans (Manifold), STEP import/export, toolpath generation</p>
+      </div>
+      <div class="skill-group">
+        <h4>DevOps</h4>
+        <p>Git, GitHub Actions, GitHub Pages, Linux/Termux</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cv-section">
+    <h2>Key Projects</h2>
+    <div class="cv-entry">
+      <h3><a href="/projects/agent-cad/">Agent CAD</a></h3>
+      <p>SDF-based geometry kernel with 44 MCP tools for LLM-authored CAD/CAM. TypeScript monorepo with Three.js viewer, 397 tests. Full CAM pipeline to Fanuc G-code.</p>
+    </div>
+    <div class="cv-entry">
+      <h3><a href="/projects/setup-sheet/">Universal Setup Sheet</a></h3>
+      <p>Browser-first CNC setup sheet system. G-code parsing, tool data import, STEP model loading, Excel and interactive HTML export.</p>
+    </div>
+    <div class="cv-entry">
+      <h3><a href="/projects/step-in-g-out/">STEP-in-G-out</a></h3>
+      <p>STEP file to G-code converter. Python-based automatic feature recognition and toolpath generation.</p>
+    </div>
+    <div class="cv-entry">
+      <h3><a href="/projects/probe/">Probe</a></h3>
+      <p>Post-driven Renishaw probing system for Haas VF-4 TRT. Auto tool wear correction and work offset updates.</p>
+    </div>
+    <div class="cv-entry">
+      <h3><a href="/projects/">+ 20 more projects</a></h3>
+      <p>Toolpath visualizers, bezier editors, spindle monitors, chatter detection, interactive explainers, and 12+ web playgrounds.</p>
+    </div>
+  </div>
+
+  <div class="cv-section">
+    <h2>Open Source</h2>
+    <div class="cv-entry">
+      <p>27 public GitHub repositories. 7 interactive explainers. 12+ web playgrounds. All projects are open source and most ship as zero-dependency single HTML files.</p>
+      <p><a href="https://github.com/hardythomas000" target="_blank">github.com/hardythomas000</a></p>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer" style="margin-top: 48px;">
+  <div class="container">
+    <a href="https://github.com/hardythomas000" target="_blank" rel="noopener">github.com/hardythomas000</a>
+  </div>
+</footer>
+
+</body>
+</html>

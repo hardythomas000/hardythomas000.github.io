@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universal Setup Sheet — Hardy Thomas</title>
+  <meta name="description" content="Browser-first CNC setup sheet system for machine shops. G-code parsing, tool data import, STEP model loading.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/shared/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <a href="/" class="nav-brand">Hardy Thomas</a>
+    <div class="nav-links">
+      <a href="/projects/" class="active">Projects</a>
+      <a href="/explainers/">Explainers</a>
+      <a href="/playgrounds/">Playgrounds</a>
+      <a href="/cv/">CV</a>
+    </div>
+  </div>
+</nav>
+
+<section class="project-hero">
+  <div class="container">
+    <span class="badge">CNC/CAM</span>
+    <h1>Universal Setup Sheet</h1>
+    <p class="one-liner">Browser-first CNC setup sheet system for machine shops. Two versions: programmer's (live editable) and machinist's (read-only export).</p>
+    <div class="tech-stack">
+      <span class="tag">HTML</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">G-code</span>
+      <span class="tag">Excel Export</span>
+      <span class="tag status">Active</span>
+    </div>
+    <div class="project-links">
+      <a href="https://github.com/hardythomas000/universal-setup-sheet" target="_blank" class="btn btn-primary">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<section class="project-content">
+  <div class="container">
+    <h2>About</h2>
+    <p>Every machine shop needs setup sheets — the document that tells the machinist how to set up and run a job. Most shops use paper, spreadsheets, or clunky legacy software. Universal Setup Sheet is a modern browser-based alternative that works on any device.</p>
+
+    <h2>Capabilities</h2>
+    <ul>
+      <li>G-code parsing — supports .nc, .tap, .gcode, .ngc, .eia, and .txt files</li>
+      <li>Tool data import from folder exports and .tooldb files</li>
+      <li>Optional STEP model loading with datum placement</li>
+      <li>Live design controls and print section toggles</li>
+      <li>Export to Excel, printable HTML, and machinist interactive HTML</li>
+    </ul>
+
+    <h2>Two Modes</h2>
+    <p>The <strong>Programmer's version</strong> is fully editable — the CAM programmer fills in tool data, adds notes, adjusts layout. The <strong>Machinist's version</strong> is a read-only export the operator uses at the machine. Clean, printable, no accidental edits.</p>
+
+    <h2>Related Projects</h2>
+    <div class="card-grid" style="margin-top: 16px;">
+      <a href="/projects/cadforge/" class="card" style="--card-accent: #4ade80;">
+        <span class="card-badge">CNC/CAM</span>
+        <h3>CadForge</h3>
+        <p>Visualize the toolpaths referenced in setup sheets.</p>
+      </a>
+      <a href="/projects/probe/" class="card" style="--card-accent: #4ade80;">
+        <span class="card-badge">CNC/CAM</span>
+        <h3>Probe</h3>
+        <p>Automated probing that pairs with setup sheet workflows.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <a href="https://github.com/hardythomas000" target="_blank" rel="noopener">github.com/hardythomas000</a>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent CAD — Hardy Thomas</title>
+  <meta name="description" content="Agent-native CAD/CAM with SDF geometry kernel. 44 MCP tools for LLM-authored CAD — booleans never fail.">
+  <meta property="og:title" content="Agent CAD — Hardy Thomas">
+  <meta property="og:description" content="Agent-native CAD/CAM with SDF geometry kernel. Tokens are the geometry, precision at the tool tip.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/shared/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <a href="/" class="nav-brand">Hardy Thomas</a>
+    <div class="nav-links">
+      <a href="/projects/" class="active">Projects</a>
+      <a href="/explainers/">Explainers</a>
+      <a href="/playgrounds/">Playgrounds</a>
+      <a href="/cv/">CV</a>
+    </div>
+  </div>
+</nav>
+
+<section class="project-hero">
+  <div class="container">
+    <span class="badge">AI-Native CAD</span>
+    <h1>Agent CAD</h1>
+    <p class="one-liner">SDF-based geometry kernel with 44 MCP tools — LLMs author CAD directly. Tokens are the geometry, precision at the tool tip.</p>
+    <div class="tech-stack">
+      <span class="tag">TypeScript</span>
+      <span class="tag">SDF</span>
+      <span class="tag">Three.js</span>
+      <span class="tag">MCP Server</span>
+      <span class="tag">CodeMirror</span>
+      <span class="tag">Vite</span>
+      <span class="tag status">Active — 397 tests passing</span>
+    </div>
+    <div class="project-links">
+      <a href="https://github.com/hardythomas000/agent-cad" target="_blank" class="btn btn-primary">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<section class="project-content">
+  <div class="container">
+    <h2>About</h2>
+    <p>Agent CAD is a full CAD/CAM system built from scratch so that AI agents can author geometry directly. The core insight: SDF (Signed Distance Functions) as the modeling kernel means booleans never fail — the #1 pain point in traditional B-Rep CAD. An LLM says <em>what</em> it wants, and the kernel resolves the geometry.</p>
+    <p>The system exposes 44 MCP tools that let any LLM create, modify, and manufacture parts. Six primitives, boolean operations (with smooth variants), transforms, modifiers, and a semantic DSL with machining vocabulary: <code>hole()</code>, <code>pocket()</code>, <code>boltCircle()</code>, <code>chamfer()</code>, <code>fillet()</code>.</p>
+
+    <h2>Architecture</h2>
+    <p>Monorepo with three packages:</p>
+    <ul>
+      <li><strong>sdf-kernel</strong> — TypeScript SDF kernel with 20 node classes, named topology for analytical face/edge identity</li>
+      <li><strong>mcp-server</strong> — MCP server exposing the full kernel API to LLMs</li>
+      <li><strong>viewer</strong> — Vite + Three.js + CodeMirror 6 viewer with face highlighting, dimension readout, dark charcoal aesthetic</li>
+    </ul>
+
+    <h2>CAM Pipeline</h2>
+    <p>Agent CAD isn't just modeling — it includes a complete CAM pipeline: 3-axis raster surfacing, 2D contour/profile, multi-level contour roughing, and Fanuc G-code output. The vision is end-to-end: an agent designs a part and generates the code to cut it.</p>
+
+    <h2>The Vision</h2>
+    <p>Hybrid kernel architecture: Fidget (SDF/WASM) for modeling, OCCT (B-Rep/WASM) at the export boundary, Manifold for mesh booleans. The kernel is self-describing — structured JSON readback after every operation gives the LLM full context of what it just built. Intent-based API means the agent works at the level of machining intent, not raw geometry commands.</p>
+
+    <h2>Related Projects</h2>
+    <div class="card-grid" style="margin-top: 16px;">
+      <a href="/cad-kernel-explainer/" class="card" style="--card-accent: #fbbf24;">
+        <span class="card-badge">Explainer</span>
+        <h3>CAD Kernels Explained</h3>
+        <p>Interactive deep-dive into B-Rep, SDF, mesh, and hybrid kernel approaches.</p>
+      </a>
+      <a href="/projects/step-in-g-out/" class="card" style="--card-accent: #4ade80;">
+        <span class="card-badge">CNC/CAM</span>
+        <h3>STEP-in-G-out</h3>
+        <p>STEP file to G-code converter.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <a href="https://github.com/hardythomas000" target="_blank" rel="noopener">github.com/hardythomas000</a>
+  </div>
+</footer>
+
+</body>
+</html>

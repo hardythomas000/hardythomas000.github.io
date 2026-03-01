@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Hardy Thomas</title>
+  <meta name="description" content="CNC/CAM tools, AI-native CAD, interactive explainers, and creative experiments by Hardy Thomas.">
+  <meta property="og:title" content="Projects — Hardy Thomas">
+  <meta property="og:description" content="CNC/CAM tools, AI-native CAD, interactive explainers, and creative experiments.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/shared/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <a href="/" class="nav-brand">Hardy Thomas</a>
+    <div class="nav-links">
+      <a href="/projects/" class="active">Projects</a>
+      <a href="/explainers/">Explainers</a>
+      <a href="/playgrounds/">Playgrounds</a>
+      <a href="/cv/">CV</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" style="padding-bottom: 32px;">
+  <div class="container">
+    <h1>Projects</h1>
+    <p class="subtitle">Everything I've built — from CNC tools to AI experiments.</p>
+  </div>
+</header>
+
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+
+    <div class="filters">
+      <button class="filter-pill active" data-filter="all">All</button>
+      <button class="filter-pill" data-filter="cnc">CNC/CAM</button>
+      <button class="filter-pill" data-filter="ai-cad">AI-Native CAD</button>
+      <button class="filter-pill" data-filter="monitoring">Monitoring</button>
+      <button class="filter-pill" data-filter="creative">Creative</button>
+      <button class="filter-pill" data-filter="geometry">Geometry</button>
+      <button class="filter-pill" data-filter="collections">Collections</button>
+    </div>
+
+    <div class="card-grid" id="project-grid">
+
+      <!-- AI-Native CAD -->
+      <a href="/projects/agent-cad/" class="card" data-category="ai-cad" style="--card-accent: #6c8aff;">
+        <span class="card-badge">AI-Native CAD</span>
+        <h3>Agent CAD</h3>
+        <p>SDF-based geometry kernel with 44 MCP tools for LLM-authored CAD. Booleans never fail. Full CAM pipeline to G-code.</p>
+        <div class="card-footer">
+          <span class="tag">TypeScript</span>
+          <span class="tag">SDF</span>
+          <span class="tag">MCP</span>
+          <span class="tag status">Active</span>
+        </div>
+      </a>
+
+      <!-- CNC/CAM -->
+      <a href="/projects/cadforge/" class="card" data-category="cnc" style="--card-accent: #4ade80;">
+        <span class="card-badge">CNC/CAM</span>
+        <h3>CadForge</h3>
+        <p>Browser-based 3D toolpath visualizer. Parse G-code with full 3D support — helical arcs, rapid/feed color coding, orbit controls.</p>
+        <div class="card-footer">
+          <span class="tag">JavaScript</span>
+          <span class="tag">Three.js</span>
+          <span class="tag status">Active</span>
+        </div>
+      </a>
+
+      <a href="/projects/step-in-g-out/" class="card" data-category="cnc" style="--card-accent: #4ade80;">
+        <span class="card-badge">CNC/CAM</span>
+        <h3>STEP-in-G-out</h3>
+        <p>STEP file to G-code converter. Load a 3D model, get machining code out.</p>
+        <div class="card-footer">
+          <span class="tag">Python</span>
+          <span class="tag">STEP</span>
+          <span class="tag">G-code</span>
+          <span class="tag status">Active</span>
+        </div>
+      </a>
+
+      <a href="/projects/setup-sheet/" class="card" data-category="cnc" style="--card-accent: #f59e0b;">
+        <span class="card-badge">CNC/CAM</span>
+        <h3>Universal Setup Sheet</h3>
+        <p>Browser-first CNC setup sheet system. G-code parsing, tool data import, STEP model loading, Excel & interactive HTML export.</p>
+        <div class="card-footer">
+          <span class="tag">HTML</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag status">Active</span>
+        </div>
+      </a>
+
+      <a href="/projects/frame-gen/" class="card" data-category="cnc" style="--card-accent: #4ade80;">
+        <span class="card-badge">CNC/CAM</span>
+        <h3>Frame Generator</h3>
+        <p>Automated frame/tab generator for 5-axis CNC workholding. Upload STEP, paint constraints, auto-generate support frame.</p>
+        <div class="card-footer">
+          <span class="tag">Python</span>
+          <span class="tag">Three.js</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag status-idea">Early Stage</span>
+        </div>
+      </a>
+
+      <a href="/projects/probe/" class="card" data-category="cnc" style="--card-accent: #4ade80;">
+        <span class="card-badge">CNC/CAM</span>
+        <h3>Probe</h3>
+        <p>Haas VF-4 TRT probing via Mastercam post processor. Renishaw Inspection Plus macros with auto tool wear correction.</p>
+        <div class="card-footer">
+          <span class="tag">Mastercam</span>
+          <span class="tag">Post Processor</span>
+          <span class="tag status">Active</span>
+        </div>
+      </a>
+
+      <!-- Creative -->
+      <a href="/projects/bezier-editor/" class="card" data-category="creative" style="--card-accent: #cb6cff;">
+        <span class="card-badge">Creative</span>
+        <h3>G-code Bezier Editor</h3>
+        <p>Interactive G-code toolpath editor — drag bezier curves, watch G-code update in real-time. Also available in 3D.</p>
+        <div class="card-footer">
+          <span class="tag">HTML</span>
+          <span class="tag">Canvas</span>
+          <a href="https://hardythomas000.github.io/gcode-bezier-editor/" target="_blank" class="tag status" onclick="event.stopPropagation();">Live Demo</a>
+        </div>
+      </a>
+
+      <!-- Monitoring -->
+      <a href="/projects/chatter-detect/" class="card" data-category="monitoring" style="--card-accent: #f472b6;">
+        <span class="card-badge">Monitoring</span>
+        <h3>Chatter Detect</h3>
+        <p>Real-time CNC chatter detection from audio using physics-informed deep learning. Non-invasive, aftermarket.</p>
+        <div class="card-footer">
+          <span class="tag">Python</span>
+          <span class="tag">Deep Learning</span>
+          <span class="tag status-idea">Idea Stage</span>
+        </div>
+      </a>
+
+      <a href="/projects/spindle-monitor/" class="card" data-category="monitoring" style="--card-accent: #f472b6;">
+        <span class="card-badge">Monitoring</span>
+        <h3>Spindle Load Monitor</h3>
+        <p>Real-time Haas spindle load monitoring dashboard with historical tracking.</p>
+        <div class="card-footer">
+          <span class="tag">HTML</span>
+          <span class="tag">JavaScript</span>
+          <a href="https://hardythomas000.github.io/Haas-spindle-load-monitor/" target="_blank" class="tag status" onclick="event.stopPropagation();">Live Demo</a>
+        </div>
+      </a>
+
+      <!-- Geometry -->
+      <a href="/projects/pyxetic/" class="card" data-category="geometry" style="--card-accent: #22d3ee;">
+        <span class="card-badge">Geometry</span>
+        <h3>Pyxetic</h3>
+        <p>Auxetic geometry exploration and generation in Python.</p>
+        <div class="card-footer">
+          <span class="tag">Python</span>
+          <span class="tag status-idea">Early Stage</span>
+        </div>
+      </a>
+
+      <!-- Collections -->
+      <a href="/explainers/" class="card" data-category="collections" style="--card-accent: #fbbf24;">
+        <span class="card-badge">Collection</span>
+        <h3>Interactive Explainers</h3>
+        <p>7 interactive explainers covering CNC toolpaths, setup sheets, cognitive engines, finance, Git, and more. Built with Claude.</p>
+        <div class="card-footer">
+          <span class="tag">HTML</span>
+          <span class="tag">Interactive</span>
+          <span class="tag status">Live</span>
+        </div>
+      </a>
+
+      <a href="/playgrounds/" class="card" data-category="collections" style="--card-accent: #fbbf24;">
+        <span class="card-badge">Collection</span>
+        <h3>Web Playgrounds</h3>
+        <p>12+ interactive web experiments. Zero dependencies, single HTML files, mobile-first. Physics, generative art, 3D, mini games.</p>
+        <div class="card-footer">
+          <span class="tag">HTML</span>
+          <span class="tag">Canvas</span>
+          <span class="tag status">Live</span>
+        </div>
+      </a>
+
+      <a href="/cad-kernel-explainer/" class="card" data-category="collections" style="--card-accent: #fbbf24;">
+        <span class="card-badge">Explainer</span>
+        <h3>CAD Kernels Explained</h3>
+        <p>Interactive deep-dive into how CAD kernels work — B-Rep, SDF, mesh, and hybrid approaches visualized.</p>
+        <div class="card-footer">
+          <span class="tag">HTML</span>
+          <span class="tag">Interactive</span>
+          <span class="tag status">Live</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <a href="https://github.com/hardythomas000" target="_blank" rel="noopener">github.com/hardythomas000</a>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.filter-pill').forEach(pill => {
+  pill.addEventListener('click', () => {
+    document.querySelector('.filter-pill.active').classList.remove('active');
+    pill.classList.add('active');
+    const filter = pill.dataset.filter;
+    document.querySelectorAll('#project-grid .card').forEach(card => {
+      card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+    });
+  });
+});
+</script>
+
+</body>
+</html>

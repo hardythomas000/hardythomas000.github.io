@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G-code Bezier Editor — Hardy Thomas</title>
+  <meta name="description" content="Interactive G-code toolpath editor — drag bezier curves, watch G-code update in real-time.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/shared/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <a href="/" class="nav-brand">Hardy Thomas</a>
+    <div class="nav-links">
+      <a href="/projects/" class="active">Projects</a>
+      <a href="/explainers/">Explainers</a>
+      <a href="/playgrounds/">Playgrounds</a>
+      <a href="/cv/">CV</a>
+    </div>
+  </div>
+</nav>
+
+<section class="project-hero">
+  <div class="container">
+    <span class="badge">Creative</span>
+    <h1>G-code Bezier Editor</h1>
+    <p class="one-liner">Interactive G-code toolpath editor — drag bezier curves, watch G-code update in real-time. Available in 2D and 3D.</p>
+    <div class="tech-stack">
+      <span class="tag">HTML</span>
+      <span class="tag">Canvas</span>
+      <span class="tag">PWA</span>
+      <span class="tag status">Live</span>
+    </div>
+    <div class="project-links">
+      <a href="https://hardythomas000.github.io/gcode-bezier-editor/" target="_blank" class="btn btn-primary">Live Demo</a>
+      <a href="https://github.com/hardythomas000/gcode-bezier-editor" target="_blank" class="btn btn-outline">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<section class="project-content">
+  <div class="container">
+    <h2>About</h2>
+    <p>G-code is rigid — straight lines and arcs. But sometimes you want a smooth, flowing toolpath. This editor lets you draw bezier curves visually and generates the corresponding G-code in real-time as you drag control points.</p>
+    <p>Built as a single HTML file (progressive web app), it works offline and on mobile. The 3D version extends the concept to full 3-axis paths with depth control.</p>
+
+    <h2>Related Projects</h2>
+    <div class="card-grid" style="margin-top: 16px;">
+      <a href="/projects/cadforge/" class="card" style="--card-accent: #4ade80;">
+        <span class="card-badge">CNC/CAM</span>
+        <h3>CadForge</h3>
+        <p>Visualize the generated G-code in 3D.</p>
+      </a>
+      <a href="/playgrounds/" class="card" style="--card-accent: #fbbf24;">
+        <span class="card-badge">Collection</span>
+        <h3>Web Playgrounds</h3>
+        <p>More interactive single-file experiments.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <a href="https://github.com/hardythomas000" target="_blank" rel="noopener">github.com/hardythomas000</a>
+  </div>
+</footer>
+
+</body>
+</html>

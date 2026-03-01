@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Probe — Hardy Thomas</title>
+  <meta name="description" content="Haas VF-4 TRT probing via Mastercam post processor with Renishaw Inspection Plus macros.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/shared/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <a href="/" class="nav-brand">Hardy Thomas</a>
+    <div class="nav-links">
+      <a href="/projects/" class="active">Projects</a>
+      <a href="/explainers/">Explainers</a>
+      <a href="/playgrounds/">Playgrounds</a>
+      <a href="/cv/">CV</a>
+    </div>
+  </div>
+</nav>
+
+<section class="project-hero">
+  <div class="container">
+    <span class="badge">CNC/CAM</span>
+    <h1>Probe</h1>
+    <p class="one-liner">Haas VF-4 TRT probing via Mastercam post processor. Renishaw Inspection Plus macros with automatic tool wear correction.</p>
+    <div class="tech-stack">
+      <span class="tag">Mastercam Post</span>
+      <span class="tag">Renishaw</span>
+      <span class="tag">Haas</span>
+      <span class="tag">G-code</span>
+      <span class="tag status">Active</span>
+    </div>
+    <div class="project-links">
+      <a href="https://github.com/hardythomas000/probe" target="_blank" class="btn btn-primary">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<section class="project-content">
+  <div class="container">
+    <h2>About</h2>
+    <p>A post-driven probing system for Haas VF-4 with TRT (trunnion/rotary table). The programmer chooses which features to probe before posting in Mastercam — the post processor detects marker operations and outputs safe positioning sequences, Renishaw Inspection Plus macro calls, and correction logic.</p>
+
+    <h2>Capabilities</h2>
+    <ul>
+      <li>Bore/boss diameter measurement with automatic tool wear correction</li>
+      <li>Pocket and slot width/length measurement with pass/fail reporting</li>
+      <li>Z datum/face probing with work offset update</li>
+    </ul>
+
+    <h2>How It Works</h2>
+    <p>Marker operations in Mastercam carry parameters in Misc Integers/Reals. The post processor detects these markers and outputs the appropriate Renishaw macro calls (9811, 9812, 9814) with safe positioning, then applies correction logic — either updating tool wear offsets or work coordinate offsets based on the measurement.</p>
+
+    <h2>Related Projects</h2>
+    <div class="card-grid" style="margin-top: 16px;">
+      <a href="/projects/setup-sheet/" class="card" style="--card-accent: #f59e0b;">
+        <span class="card-badge">CNC/CAM</span>
+        <h3>Universal Setup Sheet</h3>
+        <p>Document the probing operations alongside toolpath setup.</p>
+      </a>
+      <a href="/projects/spindle-monitor/" class="card" style="--card-accent: #f472b6;">
+        <span class="card-badge">Monitoring</span>
+        <h3>Spindle Load Monitor</h3>
+        <p>Monitor the same Haas machines in real-time.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <a href="https://github.com/hardythomas000" target="_blank" rel="noopener">github.com/hardythomas000</a>
+  </div>
+</footer>
+
+</body>
+</html>
